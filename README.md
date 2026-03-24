@@ -16,9 +16,9 @@ It loads an XML document, generates XPath suggestions, and lets you run XPath qu
 - command history (up/down arrows)
 - built-in helper commands for tree and suggestions
 
-![Main console](.\images\linux.png)
+![Main console](./images/linux.png)
 
-![Exploring the xml tree](.\images\linux2.png)
+![Exploring the xml tree](./images/linux2.png)
 
 
 ## What It Does
