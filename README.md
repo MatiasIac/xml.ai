@@ -42,10 +42,16 @@ dotnet build .\xmlai.sln
 Once compiled:
 
 ```powershell
-xmlai -f <xmlfile>
+.\xmlai\bin\Release\net10.0\xmlai.exe -f <xmlfile>
 ```
 
 If the file does not exist, it exits with an error message.
+
+Linux/WSL:
+
+```bash
+dotnet ./xmlai/bin/Release/net10.0/xmlai.dll -f <xmlfile>
+```
 
 ## Example Queries
 
@@ -71,6 +77,15 @@ If using the example `books.xml` file:
 - `Ctrl+C` exits cleanly.
 
 When running in a redirected/non-interactive context, it reads from standard input line-by-line until EOF.
+
+## Publish
+
+To generate native launchers, publish per target runtime:
+
+```powershell
+dotnet publish xmlai -c Release -r win-x64 --self-contained false
+dotnet publish xmlai -c Release -r linux-x64 --self-contained false
+```
 
 ## Security Note
 
